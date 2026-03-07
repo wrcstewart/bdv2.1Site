@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In Detail — ButterflyDreaming</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .site-banner {
+    background: rgba(200,169,110,0.08);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.45rem 1rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.07em;
+    color: var(--text-dim);
+    position: relative;
+    z-index: 101;
+  }
+  .site-banner a { color: var(--gold-dim); border-bottom: none; }
+  .wireframe {
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--text-dim);
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .state-machine {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .sm-state {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+  }
+  .sm-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.35rem;
+  }
+  .sm-name {
+    font-family: var(--font-head);
+    font-size: 1.05rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  .sm-desc {
+    font-size: 0.83rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .mod-layer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(200,169,110,0.08);
+  }
+  .mod-layer:last-child { border-bottom: none; }
+  .mod-num {
+    flex-shrink: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: var(--glow);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gold);
+  }
+  .audience-note {
+    font-size: 0.82rem;
+    color: var(--gold-dim);
+    font-style: italic;
+    border-left: 2px solid var(--gold-dim);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="site-banner">
+  This site documents an ongoing design project. The platform is in development. &nbsp;|&nbsp; <a href="https://butterflydreaming.info">butterflydreaming.info</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ButterflyDreaming</a>
+    <!-- Change 14: last in navigation -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aspirations.html">Aspirations</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="journey.html">User Journey</a></li>
+      <li><a href="participate.html">Participate</a></li>
+      <li><a href="ui.html" class="active">In Detail</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Change 14: new heading -->
+<div class="hero">
+  <div class="hero-glyph">⇌</div>
+  <h1>In Detail</h1>
+  <p class="subtitle">For the curious and the technical</p>
+</div>
+
+<div class="page">
+
+  <p class="audience-note">
+    This page contains technical and design detail aimed primarily at developers, designers, and researchers. If you are exploring the platform as a potential participant, the <a href="journey.html">User Journey</a> and <a href="participate.html">Participate</a> pages will be more immediately useful.
+  </p>
+
+  <h2>Interface philosophy</h2>
+  <p>
+    The interface should feel calm, exploratory, and collaborative. It communicates shared presence without social pressure. Dyadic controls are small, explicit, and reversible. The main screen is dominated by node browsing — the symbolic field is always the foreground, never the mechanics.
+  </p>
+  <p>
+    Technical language is avoided throughout. The interaction vocabulary is intentionally simple and non-mechanical:
+  </p>
+  <div style="margin: 1.5rem 0;">
+    <span class="tag">Offer — propose a node</span>
+    <span class="tag">Accept — agree a parent node</span>
+    <span class="tag">Weave — open the fusion editor</span>
+    <span class="tag">Approve — sign off on the draft</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Layout: the browsing view</h2>
+  <p>During the wandering and orbit phases, the interface is organised around three panels:</p>
+
+  <div class="wireframe">+----------------------------------------------------------+
+| Symbolic field (nodes / graph / list)                    |
+|                                                          |
+| [Node detail]               [Between you]                |
+|  Title / text / tags         Bridge suggestions          |
+|                                                          |
+| [Offer]  [Bookmark]    [Near you]      [Near partner]    |
++----------------------------------------------------------+
+| Proposal tray:  A offered [X]   B offered [Y]  Locked: — |
++----------------------------------------------------------+</div>
+
+  <p>
+    Reading the diagram element by element:
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Symbolic field</strong> occupies the main body of the screen — the browsable surface of the Mengtu, displayed as a node list, visual graph, or clustered view depending on user preference. This is always the foreground; the dyadic controls sit around its edges.
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Node detail panel</strong> opens when a user selects a node. It shows the full text of the fragment, its archetype tags, its provenance (seed source or the dyad session that created it), and its position in the genealogy — which nodes are its parents, and which child nodes it has generated. A user can dwell here, reflect, and decide whether to Offer the node to their partner.
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Near you</strong> and <strong style="color: var(--text);">Near partner</strong> panels show nodes from each user's individual browsing trail — what each person has been drawn to independently. These are visible to both users as gentle orientation signals, not as personal data.
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Between you</strong> panel is the gravity well — a live surface of nodes that bridge the two users' browsing trails, updated dynamically as the dyad moves through the Metaflower. It is the most actively modulated panel: the AI surfaces nodes here that connect what both users have been exploring.
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Proposal tray</strong> runs along the bottom of the screen. Either user may place a node here by pressing Offer. Both users see the tray simultaneously. <em>Locked: —</em> indicates that no parent node has yet been mutually agreed — once a node is accepted by both users it moves from the tray into a locked Parent A or Parent B slot, and the dash is replaced by the node title.
+  </p>
+  <p>
+    The gravity well scoring function that drives the Between you panel is:
+  </p>
+  <div class="card" style="font-family: monospace; font-size: 0.88rem; color: var(--text-dim);">
+    score(node) = w<sub>A</sub> × attention<sub>A</sub>(node) + w<sub>B</sub> × attention<sub>B</sub>(node) + w<sub>AB</sub> × overlap(node)
+  </div>
+  <p>
+    Overlap increases when both users have interacted with a node, or with nearby nodes in the same archetype cluster. Only ephemeral, in-session signals are used — no personal data, no long-term profiling.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2>Layout: the Weave editor</h2>
+
+  <div class="wireframe">+----------------------------------------------------------+
+| Parent A: [text snippet]     Parent B: [text snippet]    |
++----------------------------------------------------------+
+| Shared draft (child node)                                |
+|                                                          |
+|  _____________________________________________________   |
+| |                                                     |  |
+| |                                                     |  |
+| |_____________________________________________________|  |
+|                                                          |
+| [A: Approve ✓]      [B: Approve ✓]     [Save when both] |
++----------------------------------------------------------+</div>
+
+  <p>
+    Reading the diagram element by element:
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Parent A and Parent B</strong> nodes sit at the top of the screen throughout the entire drafting session — always visible, always present as the symbolic anchors from which the child node grows. They cannot be edited at this stage; they are the fixed inheritance.
+  </p>
+  <p>
+    The <strong style="color: var(--text);">shared draft area</strong> is a single collaborative text space — not a turn-based chat, not two separate input fields. Both users write into the same text simultaneously, in real time. Either may add, delete, or reshape any part of the draft at any point. This is co-authorship in the most literal sense: the text belongs to neither user individually.
+  </p>
+  <p>
+    The <strong style="color: var(--text);">Approve / Save</strong> flow is a two-step gate. Each user has their own Approve button. Once a user presses Approve their confirmation is recorded — but Save only activates when both users have approved the <em>current</em> version simultaneously. If either user edits the draft after approving, all approvals reset. This prevents one user from making a final change after the other has signed off. The child node is published to the Mengtu only when both users are actively satisfied with the exact text in front of them.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2>The handshake protocol</h2>
+  <p>
+    The proposal and agreement process is an explicit handshake. The system never assumes readiness — every stage gate requires active user action.
+  </p>
+
+  <!-- Change 16: P0 box expanded, less telegraphic -->
+  <div class="state-machine">
+    <div class="sm-state">
+      <div class="sm-label">P0</div>
+      <div class="sm-name">Wandering</div>
+      <div class="sm-desc">The dyad has formed and both users are exploring the Metaflower together. No proposals have been made yet. This is the open, unhurried phase — the gravity well is building, browsing trails are overlapping, and the AI modulator may be surfacing bridge nodes. Either user may Offer a node at any time, but there is no pressure to do so. The encounter is already happening.</div>
+    </div>
+    <div class="sm-state">
+      <div class="sm-label">P1</div>
+      <div class="sm-name">Proposals open</div>
+      <div class="sm-desc">At least one node has been proposed and placed in the shared proposal tray. Proposals remain retractable — this is an invitation, not a commitment. The partner may Accept, offer an alternative, or continue exploring without responding. Multiple proposals may be in the tray simultaneously.</div>
+    </div>
+    <div class="sm-state">
+      <div class="sm-label">P2</div>
+      <div class="sm-name">One parent locked</div>
+      <div class="sm-desc">The first parent node has been accepted by both users and is locked into the Parent A slot. The dyad now continues browsing and proposing to find the second parent. The locked node remains visible as an anchor — it may influence what both users browse next.</div>
+    </div>
+    <div class="sm-state">
+      <div class="sm-label">P3</div>
+      <div class="sm-name">Weave opens</div>
+      <div class="sm-desc">Two parents are locked. The Weave editor opens automatically. Drafting begins. Both parents remain visible at the top of the shared editing space throughout.</div>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Action</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>Offer(node)</td><td>Creates a proposal card visible to both users. Retractable at any time before acceptance.</td></tr>
+      <tr><td>Accept(node)</td><td>Locks node as parent if both have accepted. Shows as Parent A or Parent B.</td></tr>
+      <tr><td>Retract(node)</td><td>Removes a proposal if not yet locked.</td></tr>
+      <tr><td>Replace(parent)</td><td>Unlocks a slot and returns to proposal state. Requires both users to confirm if already locked.</td></tr>
+      <tr><td>Approve(draft)</td><td>Records this user's approval of the current draft text.</td></tr>
+      <tr><td>Save(child)</td><td>Publishes the child node to the Mengtu. Requires both approvals active simultaneously.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <h2>The archetype cluster system</h2>
+  <p>
+    Nodes in the Mengtu are tagged by archetypal family. These tags guide AI recommendations and support navigation through the Metaflower without constraining interpretation. The working cluster set is:
+  </p>
+
+  <div style="margin: 1.5rem 0;">
+    <p style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.75rem;">Nature archetypes</p>
+    <span class="tag">Water / Reflection</span>
+    <span class="tag">Fire / Spark</span>
+    <span class="tag">Landscape / Weather</span>
+    <span class="tag">Seasons / Cycles</span>
+    <span class="tag">Garden / Wild</span>
+  </div>
+
+  <div style="margin: 1.5rem 0;">
+    <p style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.75rem;">Human experience</p>
+    <span class="tag">Journey / Path</span>
+    <span class="tag">Threshold / Crossing</span>
+    <span class="tag">Community / Encounter</span>
+    <span class="tag">Memory / Time</span>
+    <span class="tag">Wound / Healing</span>
+    <span class="tag">Love / Bond</span>
+  </div>
+
+  <div style="margin: 1.5rem 0;">
+    <p style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.75rem;">Symbolic imagination</p>
+    <span class="tag">Dream / Vision</span>
+    <span class="tag">Word / Silence</span>
+    <span class="tag">Paradox</span>
+    <span class="tag">Myth / Archetype</span>
+    <span class="tag">Light / Dark</span>
+    <span class="tag">Descent / Ascent</span>
+    <span class="tag">Order / Chaos</span>
+    <span class="tag">Self / Double</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Moderation architecture</h2>
+  <p>
+    ButterflyDreaming is intentionally anonymous and does not track user identities. Moderation therefore cannot rely on identity enforcement. Instead it uses layered technical screening, applied at multiple points — during typing, proposing, weaving, and saving.
+  </p>
+  <p>
+    The goal of moderation is not punitive control but gentle guidance that keeps the environment supportive and safe for vulnerable participants.
+  </p>
+
+  <div class="card">
+    <div class="mod-layer">
+      <div class="mod-num">1</div>
+      <div>
+        <strong style="color: var(--text);">Client — immediate feedback</strong>
+        <p style="margin-top: 0.4rem; font-size: 0.88rem;">Runs directly on the user's device. Includes English dictionary whitelist checks, spell-checking assistance, lightweight toxicity signals, and out-of-vocabulary ratio detection. Provides immediate visual feedback before text is submitted. Detects obfuscation patterns and unusually high proportions of non-English vocabulary.</p>
+      </div>
+    </div>
+    <div class="mod-layer">
+      <div class="mod-num">2</div>
+      <div>
+        <strong style="color: var(--text);">Server — policy enforcement</strong>
+        <p style="margin-top: 0.4rem; font-size: 0.88rem;">Applies stronger policy rules once text is submitted. Checks for policy violations, applies rate limits and quarantine for suspicious sessions, and logs minimal decision metadata. The authoritative moderation layer.</p>
+      </div>
+    </div>
+    <div class="mod-layer">
+      <div class="mod-num">3</div>
+      <div>
+        <strong style="color: var(--text);">Cloud — escalation only</strong>
+        <p style="margin-top: 0.4rem; font-size: 0.88rem;">Reserved for borderline or high-risk cases — threats, hate speech, sexual content, self-harm indicators. Returns a decision to the server. Used sparingly to preserve privacy and minimise cost.</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size: 0.88rem; color: var(--text-dim);">
+    Moderation pipeline: <code style="background: var(--bg3); padding: 0.1rem 0.4rem; border-radius: 3px;">user text → client spellcheck + whitelist → OOV ratio → server policy filter → optional cloud → allow or request rephrase</code>
+  </p>
+
+  <div class="divider"></div>
+
+  <h2>The node data model</h2>
+  <p>
+    Each symbolic text node in the Mengtu carries the following data. Session data is minimal and ephemeral — no user identity is ever stored.
+  </p>
+
+  <table>
+    <thead><tr><th>Field</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>Memgraph node ID (primary key)</td></tr>
+      <tr><td>url</td><td>Permanent public URL: <code>domain.org/n/{id}</code></td></tr>
+      <tr><td>text</td><td>The symbolic content</td></tr>
+      <tr><td>source</td><td>seed | dyad_child</td></tr>
+      <tr><td>tags</td><td>Archetype cluster tags (optional array)</td></tr>
+      <tr><td>lang</td><td>Language code (default: en)</td></tr>
+      <tr><td>created_at</td><td>Timestamp</td></tr>
+      <tr><td>moderation</td><td>Status and flags</td></tr>
+      <tr><td>counters</td><td>Views, selects, fusions</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Graph edges in the Mengtu: <code style="font-size: 0.85rem; background: var(--bg3); padding: 0.2rem 0.5rem; border-radius: 3px;">PARENT_OF · BRIDGE_TO · CREATED · USED_PARENT · TAGGED_AS</code>
+  </p>
+  <p>
+    Storage: Memgraph for the node graph and relationships; MongoDB for session state and moderation logs.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2>Preventing famous-node collapse</h2>
+  <p>
+    In early growth, a few iconic seed nodes can dominate attention through preferential attachment — a small number of well-connected nodes accumulate ever more traffic, while the rest of the Mengtu is neglected.
+  </p>
+  <p>
+    The platform mitigates this through: seeding many equal-weight fragments; fragmenting famous lines into smaller atoms; and including a small percentage of <em>quiet nodes</em> — under-visited, older, or isolated cluster nodes — in every Metaflower browsing panel. Random pairing itself helps, by mixing interpretive styles and preventing clique formation.
+  </p>
+  <p>
+    Iterative tuning uses simple behavioural metrics: time-to-first-proposal, acceptance rate, Weave completion rate, cross-cluster fusion rate, and under-visited selection share.
+  </p>
+
+</div>
+
+<footer>
+  ButterflyDreaming &mdash; a reflective ecosystem &mdash; design documentation v0.2.1
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+/* ButterflyDreaming — Shared Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* ── Variables ── */
+:root {
+  --bg:        #080b18;
+  --bg2:       #0f1424;
+  --bg3:       #141930;
+  --text:      #e8dfc8;
+  --text-dim:  #9a9178;
+  --gold:      #c8a96e;
+  --gold-dim:  #7a6440;
+  --lilac:     #a89bc8;
+  --border:    rgba(200,169,110,0.18);
+  --glow:      rgba(200,169,110,0.08);
+  --font-head: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', sans-serif;
+  --max:       860px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+/* ── Starfield background ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 15% 20%, rgba(200,169,110,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 60%, rgba(168,155,200,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 30%, rgba(200,169,110,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 75%, rgba(168,155,200,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 10%, rgba(200,169,110,0.1) 0%, transparent 100%),
+    radial-gradient(600px 600px at 20% 80%, rgba(168,155,200,0.04) 0%, transparent 70%),
+    radial-gradient(400px 400px at 80% 20%, rgba(200,169,110,0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Navigation ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,11,24,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+}
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  gap: 1rem;
+}
+.nav-brand {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  gap: 0.15rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 3px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+  background: var(--glow);
+}
+
+/* ── Page wrapper ── */
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+/* ── Hero ── */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-glyph {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.hero .subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lilac);
+  margin-bottom: 2rem;
+}
+.hero .lede {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  line-height: 1.9;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 3rem auto;
+}
+
+/* ── Section headings ── */
+h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+h3 {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--lilac);
+  margin: 2rem 0 0.75rem;
+}
+
+/* ── Body text ── */
+p { margin-bottom: 1.25rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-dim);
+  transition: border-color 0.2s, color 0.2s;
+}
+a:hover { border-color: var(--gold); }
+
+/* ── Cards / panels ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+/* ── Quote / pull ── */
+blockquote {
+  border-left: 2px solid var(--gold-dim);
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+/* ── Journey steps ── */
+.steps { counter-reset: step; margin: 2rem 0; }
+.step {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--gold);
+  counter-increment: step;
+}
+.step-body h3 { margin-top: 0; }
+
+/* ── Lifecycle bar ── */
+.lifecycle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+.lc-node {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  color: var(--text);
+}
+.lc-arrow {
+  color: var(--gold-dim);
+  font-size: 0.9rem;
+}
+
+/* ── Table ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+th {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-weight: 400;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-style: italic;
+}
+td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(200,169,110,0.08);
+  vertical-align: top;
+  color: var(--text-dim);
+}
+tr:last-child td { border-bottom: none; }
+
+/* ── Tag pill ── */
+.tag {
+  display: inline-block;
+  background: var(--glow);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin: 0.2rem;
+}
+
+/* ── Chinese accent ── */
+.zh {
+  font-family: var(--font-head);
+  font-style: normal;
+  color: var(--lilac);
+  font-size: 1.1em;
+}
+
+/* ── Footer ── */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .page { padding: 2.5rem 1.25rem 4rem; }
+  .nav-inner { height: auto; padding: 0.75rem 0; flex-direction: column; align-items: flex-start; }
+  .nav-links a { font-size: 0.72rem; padding: 0.3rem 0.5rem; }
+  .hero { padding: 3rem 1.25rem 2rem; }
+}
