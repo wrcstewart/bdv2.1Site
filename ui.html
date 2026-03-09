@@ -162,7 +162,7 @@
     Reading the diagram element by element:
   </p>
   <p>
-    The <strong style="color: var(--text);">Symbolic field</strong> occupies the main body of the screen — the browsable surface of the Mengtu, displayed as a node list, visual graph, or clustered view depending on user preference. This is always the foreground; the dyadic controls sit around its edges.
+    The <strong style="color: var(--text);">Symbolic field</strong> occupies the main body of the screen — the browsable surface of the Text-Graph, displayed as a node list, visual graph, or clustered view depending on user preference. This is always the foreground; the dyadic controls sit around its edges.
   </p>
   <p>
     The <strong style="color: var(--text);">Node detail panel</strong> opens when a user selects a node. It shows the full text of the fragment, its archetype tags, its provenance (seed source or the dyad session that created it), and its position in the genealogy — which nodes are its parents, and which child nodes it has generated. A user can dwell here, reflect, and decide whether to Offer the node to their partner.
@@ -171,7 +171,7 @@
     The <strong style="color: var(--text);">Near you</strong> and <strong style="color: var(--text);">Near partner</strong> panels show nodes from each user's individual browsing trail — what each person has been drawn to independently. These are visible to both users as gentle orientation signals, not as personal data.
   </p>
   <p>
-    The <strong style="color: var(--text);">Between you</strong> panel is the gravity well — a live surface of nodes that bridge the two users' browsing trails, updated dynamically as the dyad moves through the Metaflower. It is the most actively modulated panel: the AI surfaces nodes here that connect what both users have been exploring.
+    The <strong style="color: var(--text);">Between you</strong> panel is the gravity well — a live surface of nodes that bridge the two users' browsing trails, updated dynamically as the dyad moves through the graph browsing experience. It is the most actively modulated panel: the AI surfaces nodes here that connect what both users have been exploring.
   </p>
   <p>
     The <strong style="color: var(--text);">Proposal tray</strong> runs along the bottom of the screen. Either user may place a node here by pressing Offer. Both users see the tray simultaneously. <em>Locked: —</em> indicates that no parent node has yet been mutually agreed — once a node is accepted by both users it moves from the tray into a locked Parent A or Parent B slot, and the dash is replaced by the node title.
@@ -213,7 +213,7 @@
     The <strong style="color: var(--text);">shared draft area</strong> is a single collaborative text space — not a turn-based chat, not two separate input fields. Both users write into the same text simultaneously, in real time. Either may add, delete, or reshape any part of the draft at any point. This is co-authorship in the most literal sense: the text belongs to neither user individually.
   </p>
   <p>
-    The <strong style="color: var(--text);">Approve / Save</strong> flow is a two-step gate. Each user has their own Approve button. Once a user presses Approve their confirmation is recorded — but Save only activates when both users have approved the <em>current</em> version simultaneously. If either user edits the draft after approving, all approvals reset. This prevents one user from making a final change after the other has signed off. The child node is published to the Mengtu only when both users are actively satisfied with the exact text in front of them.
+    The <strong style="color: var(--text);">Approve / Save</strong> flow is a two-step gate. Each user has their own Approve button. Once a user presses Approve their confirmation is recorded — but Save only activates when both users have approved the <em>current</em> version simultaneously. If either user edits the draft after approving, all approvals reset. This prevents one user from making a final change after the other has signed off. The child node is published to the Text-Graph only when both users are actively satisfied with the exact text in front of them.
   </p>
 
   <div class="divider"></div>
@@ -228,7 +228,7 @@
     <div class="sm-state">
       <div class="sm-label">P0</div>
       <div class="sm-name">Wandering</div>
-      <div class="sm-desc">The dyad has formed and both users are exploring the Metaflower together. No proposals have been made yet. This is the open, unhurried phase — the gravity well is building, browsing trails are overlapping, and the AI modulator may be surfacing bridge nodes. Either user may Offer a node at any time, but there is no pressure to do so. The encounter is already happening.</div>
+      <div class="sm-desc">The dyad has formed and both users are exploring the graph together. No proposals have been made yet. This is the open, unhurried phase — the gravity well is building, browsing trails are overlapping, and the AI modulator may be surfacing bridge nodes. Either user may Offer a node at any time, but there is no pressure to do so. The encounter is already happening.</div>
     </div>
     <div class="sm-state">
       <div class="sm-label">P1</div>
@@ -255,7 +255,7 @@
       <tr><td>Retract(node)</td><td>Removes a proposal if not yet locked.</td></tr>
       <tr><td>Replace(parent)</td><td>Unlocks a slot and returns to proposal state. Requires both users to confirm if already locked.</td></tr>
       <tr><td>Approve(draft)</td><td>Records this user's approval of the current draft text.</td></tr>
-      <tr><td>Save(child)</td><td>Publishes the child node to the Mengtu. Requires both approvals active simultaneously.</td></tr>
+      <tr><td>Save(child)</td><td>Publishes the child node to the Text-Graph. Requires both approvals active simultaneously.</td></tr>
     </tbody>
   </table>
 
@@ -263,7 +263,7 @@
 
   <h2>The archetype cluster system</h2>
   <p>
-    Nodes in the Mengtu are tagged by archetypal family. These tags guide AI recommendations and support navigation through the Metaflower without constraining interpretation. The working cluster set is:
+    Nodes in the Text-Graph are tagged by archetypal family. These tags guide AI recommendations and support navigation through the graph browsing experience without constraining interpretation. The working cluster set is:
   </p>
 
   <div style="margin: 1.5rem 0;">
@@ -339,7 +339,7 @@
 
   <h2>The node data model</h2>
   <p>
-    Each symbolic text node in the Mengtu carries the following data. Session data is minimal and ephemeral — no user identity is ever stored.
+    Each symbolic text node in the Text-Graph carries the following data. Session data is minimal and ephemeral — no user identity is ever stored.
   </p>
 
   <table>
@@ -358,7 +358,7 @@
   </table>
 
   <p>
-    Graph edges in the Mengtu: <code style="font-size: 0.85rem; background: var(--bg3); padding: 0.2rem 0.5rem; border-radius: 3px;">PARENT_OF · BRIDGE_TO · CREATED · USED_PARENT · TAGGED_AS</code>
+    Graph edges in the Text-Graph: <code style="font-size: 0.85rem; background: var(--bg3); padding: 0.2rem 0.5rem; border-radius: 3px;">PARENT_OF · BRIDGE_TO · CREATED · USED_PARENT · TAGGED_AS</code>
   </p>
   <p>
     Storage: Memgraph for the node graph and relationships; MongoDB for session state and moderation logs.
@@ -368,10 +368,10 @@
 
   <h2>Preventing famous-node collapse</h2>
   <p>
-    In early growth, a few iconic seed nodes can dominate attention through preferential attachment — a small number of well-connected nodes accumulate ever more traffic, while the rest of the Mengtu is neglected.
+    In early growth, a few iconic seed nodes can dominate attention through preferential attachment — a small number of well-connected nodes accumulate ever more traffic, while the rest of the Text-Graph is neglected.
   </p>
   <p>
-    The platform mitigates this through: seeding many equal-weight fragments; fragmenting famous lines into smaller atoms; and including a small percentage of <em>quiet nodes</em> — under-visited, older, or isolated cluster nodes — in every Metaflower browsing panel. Random pairing itself helps, by mixing interpretive styles and preventing clique formation.
+    The platform mitigates this through: seeding many equal-weight fragments; fragmenting famous lines into smaller atoms; and including a small percentage of <em>quiet nodes</em> — under-visited, older, or isolated cluster nodes — in every graph browsing experience browsing panel. Random pairing itself helps, by mixing interpretive styles and preventing clique formation.
   </p>
   <p>
     Iterative tuning uses simple behavioural metrics: time-to-first-proposal, acceptance rate, Weave completion rate, cross-cluster fusion rate, and under-visited selection share.
@@ -382,6 +382,13 @@
 <footer>
   ButterflyDreaming &mdash; a reflective ecosystem &mdash; design documentation v0.2.1
 </footer>
+
+
+<!-- Hyvor Talk Comments -->
+<div style="max-width:860px; margin:3rem auto; padding:0 2rem;">
+  <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+  <hyvor-talk-comments website-id="15124" page-id="bd-ui"></hyvor-talk-comments>
+</div>
 
 </body>
 </html>
