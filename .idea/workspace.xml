@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d7caa91-0292-4ac6-b67c-53ff090668f3" name="Changes" comment="commit 1" />
+    <list default="true" id="1d7caa91-0292-4ac6-b67c-53ff090668f3" name="Changes" comment="CommitC">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +42,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/williamstewart2/WebstormProjects/bdv2.1Site",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +54,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -69,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772887049231</updated>
-      <workItem from="1772887050241" duration="1150000" />
+      <workItem from="1772887050241" duration="15399000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1">
       <option name="closed" value="true" />
@@ -79,14 +85,115 @@
       <option name="project" value="LOCAL" />
       <updated>1772887404034</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit 2">
+      <option name="closed" value="true" />
+      <created>1772888344952</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772888344952</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit4">
+      <option name="closed" value="true" />
+      <created>1772890601663</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772890601663</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit5">
+      <option name="closed" value="true" />
+      <created>1772891195866</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772891195866</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit6">
+      <option name="closed" value="true" />
+      <created>1772898980658</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772898980658</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit7">
+      <option name="closed" value="true" />
+      <created>1772972346074</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772972346074</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit8">
+      <option name="closed" value="true" />
+      <created>1773068189125</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1773068189125</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit9">
+      <option name="closed" value="true" />
+      <created>1773069765941</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1773069765941</updated>
+    </task>
+    <task id="LOCAL-00009" summary="CommitA">
+      <option name="closed" value="true" />
+      <created>1773070992055</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773070992055</updated>
+    </task>
+    <task id="LOCAL-00010" summary="CommitB">
+      <option name="closed" value="true" />
+      <created>1773078825717</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1773078825717</updated>
+    </task>
+    <task id="LOCAL-00011" summary="CommitC">
+      <option name="closed" value="true" />
+      <created>1773081201859</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773081201859</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 1" />
+    <MESSAGE value="commit 2" />
+    <MESSAGE value="Commit4" />
+    <MESSAGE value="Commit5" />
+    <MESSAGE value="Commit6" />
+    <MESSAGE value="Commit7" />
+    <MESSAGE value="Commit8" />
+    <MESSAGE value="Commit9" />
+    <MESSAGE value="CommitA" />
+    <MESSAGE value="CommitB" />
+    <MESSAGE value="CommitC" />
+    <option name="LAST_COMMIT_MESSAGE" value="CommitC" />
   </component>
 </project>
