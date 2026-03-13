@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ButterflyDreaming — Project Timeline</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .site-banner {
+    background: rgba(200,169,110,0.08);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.99rem;
+    letter-spacing: 0.07em;
+    color: var(--text-dim);
+    position: relative;
+    z-index: 101;
+  }
+  .site-banner a {
+    color: var(--gold-dim);
+    border-bottom: none;
+  }
+
+  /* Timeline-specific styles */
+  .tl-section {
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .tl-section-glyph {
+    font-size: 1.3rem;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .tl-section h2 {
+    font-family: var(--font-head);
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tl-subsection {
+    margin: 1.6rem 0 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .tl-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+  }
+  .tl-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+    font-size: 0.97rem;
+    line-height: 1.7;
+  }
+  .tl-list li::before {
+    content: '◦';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+  }
+  .tl-list li.tl-bold {
+    font-weight: 500;
+  }
+  .tl-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0.3rem 0 0.3rem 1.2rem;
+  }
+  .tl-sublist li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.35rem;
+    color: var(--text-dim);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .tl-sublist li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    opacity: 0.6;
+  }
+  .tl-note {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 0.92rem;
+    margin: 0.3rem 0 0.6rem 1.4rem;
+    line-height: 1.65;
+  }
+  .tl-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.55rem;
+    border-radius: 2px;
+    margin-bottom: 0.3rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+  .tag-done   { background: rgba(100,180,120,0.12); color: #7cc897; border: 1px solid rgba(100,180,120,0.25); }
+  .tag-now    { background: rgba(200,169,110,0.12); color: var(--gold); border: 1px solid var(--border); }
+  .tag-2026   { background: rgba(168,155,200,0.10); color: var(--lilac); border: 1px solid rgba(168,155,200,0.2); }
+  .tag-2027   { background: rgba(168,155,200,0.06); color: var(--lilac); border: 1px solid rgba(168,155,200,0.12); }
+
+  .tl-callout {
+    border-left: 2px solid var(--gold-dim);
+    padding: 0.6rem 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="site-banner">
+  This site documents an ongoing design project. The platform is in development. &nbsp;|&nbsp; <a href="https://butterflydreaming.ai">butterflydreaming.ai</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">ButterflyDreaming</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aspirations.html">Aspirations</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="journey.html">User Journey</a></li>
+      <li><a href="participate.html">Participate</a></li>
+      <li><a href="ui.html">In Detail</a></li>
+      <li><a href="timeline.html" class="active">Timeline</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-glyph">⟳</div>
+  <h1>Project Timeline</h1>
+  <p class="subtitle">Status &amp; Roadmap — March 2026</p>
+</div>
+
+<div class="page">
+
+  <p>
+    ButterflyDreaming is a long-term, non-commercial, volunteer-led project. This page records what has been completed, what is currently underway, and what is planned. Dates beyond Spring 2026 are indicative; pace is governed by the work team's capacity and the recruitment of collaborators.
+  </p>
+
+  <div class="divider"></div>
+
+  <!-- COMPLETED -->
+  <div class="tl-section">
+    <span class="tl-section-glyph">✦</span>
+    <h2>Completed</h2>
+  </div>
+  <span class="tl-tag tag-done">Done</span>
+
+  <p class="tl-subsection">Infrastructure &amp; Public Presence</p>
+  <ul class="tl-list">
+    <li>Domain registration across all variants — butterflydreaming .org / .net / .com / .ai / .art / .me / .info</li>
+    <li>Information website (butterflydreaming.info) published, open for comments and invitations to support</li>
+    <li>Holding site live at butterflydreaming.ai</li>
+    <li>Development and prototype host machine commissioned (MacBook M4, 128GB)</li>
+    <li>AGPL-3.0 open-source licence adopted — a deliberate and long-term commitment to openness</li>
+  </ul>
+
+  <p class="tl-subsection">Technical Prototyping &amp; Confidence Testing</p>
+  <ul class="tl-list">
+    <li>Part design of the overall system architecture</li>
+    <li>WebSocket dyadic test chat system written; child node data transfer to a cloud JSON database (MongoDB) tested</li>
+    <li>Test opening of the chat system to the web via Cloudflare tunnel</li>
+    <li>Push/pull of test data to an in-memory graph database (Memgraph, running in Docker); data load estimates completed</li>
+    <li>Verification that Google toxicity screening runs client-side in JavaScript</li>
+    <li>Confidence testing of local LLMs on the host machine</li>
+    <li>Verification and research on music generation from text (ABC notation system with bespoke editor)</li>
+    <li>Preliminary work on an external media project (literary novel) to demonstrate read-access use of butterflydreaming.ai</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- CURRENT -->
+  <div class="tl-section">
+    <span class="tl-section-glyph">▶</span>
+    <h2>Current — Spring 2026</h2>
+  </div>
+  <span class="tl-tag tag-now">Now</span>
+
+  <p class="tl-subsection">Ethics Framework</p>
+  <ul class="tl-list">
+    <li>Discuss and clarify privacy and safety issues through publication on a dedicated <a href="ethics.html">Ethics page</a> — no further development proceeds until we are confident there are no legal or ethical constraints to the proposed platform</li>
+  </ul>
+
+  <p class="tl-subsection">Outreach &amp; Presence</p>
+  <ul class="tl-list">
+    <li>Publicising butterflydreaming.info; integrating comments and invitations to support</li>
+    <li>LinkedIn profiles established for founding team; actively seeking advisors and collaborators</li>
+  </ul>
+
+  <p class="tl-subsection">Organisational</p>
+  <ul class="tl-list">
+    <li>Formalising fiscal hosting arrangement via Social Change Nest (UK) and Open Collective for transparent, non-commercial funding</li>
+    <li>Recruitment of external advisors in: platform design, symbolic content curation, therapeutic practice, technical development</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- 2026 ROADMAP -->
+  <div class="tl-section">
+    <span class="tl-section-glyph">◈</span>
+    <h2>2026 Roadmap</h2>
+  </div>
+  <span class="tl-tag tag-2026">2026</span>
+
+  <p class="tl-subsection">Technical</p>
+  <ul class="tl-list">
+    <li>Further research into chat/AI/content handling; use of AI coding platforms to produce a new generation of code</li>
+    <li>Verification of an adequate content moderation function:
+      <ul class="tl-sublist">
+        <li>Whitelist composition</li>
+        <li>Identity non-disclosure architecture</li>
+        <li>Toxicity detector code</li>
+      </ul>
+    </li>
+    <li>Pairing algorithm: design, implementation and initial testing — a novel and critical technical element</li>
+    <li>Scale target: the platform is designed to demonstrate viability at several hundred concurrent users on local infrastructure — deliberately bounded, sufficient to evaluate whether the project warrants further expansion, and consistent with the text-only, layered-AI architecture</li>
+  </ul>
+
+  <p class="tl-subsection">Content &amp; Corpus</p>
+  <ul class="tl-list">
+    <li>Work team to research and structure primer content nodes for uploading when the platform is ready <span style="color:var(--text-dim); font-style:italic;">(open-ended, ongoing)</span></li>
+    <li>Sourcing, rights clearance, and curation of the symbolic text corpus — poetry, myth, folktale, philosophy — that seeds the platform</li>
+    <li>Continue integration research for external media usage</li>
+  </ul>
+
+  <p class="tl-subsection">Research &amp; Writing</p>
+  <ul class="tl-list">
+    <li>Preparation of an academic paper describing the project design</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- 2027 ROADMAP -->
+  <div class="tl-section">
+    <span class="tl-section-glyph">◈</span>
+    <h2>2027 Roadmap</h2>
+  </div>
+  <span class="tl-tag tag-2027">2027</span>
+
+  <p class="tl-subsection">Platform Development</p>
+  <ul class="tl-list">
+    <li class="tl-bold">Research, classification, and integration of priming content nodes into the AI-modulated browsing system</li>
+  </ul>
+  <p class="tl-note">This is the critical and most challenging element of the project — the work on which everything else depends.</p>
+  <ul class="tl-list">
+    <li>Platform under test: further evolution of navigation and LLM integration for user browsing and pairing</li>
+    <li>Security review — particularly given anonymous user data handling</li>
+    <li>Begin adding text-input media engines based on client JavaScript modules (art, music, XR, …)</li>
+    <li>Consider scope for further external read usage (e.g. performance media)</li>
+  </ul>
+
+  <p class="tl-subsection">Community &amp; Evaluation</p>
+  <ul class="tl-list">
+    <li>Guide possible local group formation and experimentation</li>
+    <li>Soft/beta launch with a defined pilot group — size, selection criteria, and facilitation to be determined</li>
+    <li>Begin formal evaluation: define success metrics, identify evaluators, agree pilot scope</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <div class="tl-callout">
+    The difficult and critical parts of the project are the research, classification, and integration of the priming content nodes into a coherent AI-modulated experience. Everything else is scaffolding in support of that core challenge.
+  </div>
+
+</div>
+
+<footer>
+  ButterflyDreaming &mdash; a reflective ecosystem &mdash; design documentation v0.2
+</footer>
+
+<!-- Hyvor Talk Comments -->
+<div style="max-width:860px; margin:3rem auto; padding:0 2rem;">
+<p style="font-size:0.86rem; color:var(--text-dim); letter-spacing:0.04em; text-align:center; margin:0 auto 0.8rem; max-width:860px; padding:0 2rem; font-style:italic;">
+  Guest commenting welcome — no account needed. Log in with a Hyvor account to receive reply notifications and maintain a consistent identity.
+</p>
+  <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+  <hyvor-talk-comments website-id="15124" page-id="bd-timeline"></hyvor-talk-comments>
+</div>
+
+</body>
+</html>
