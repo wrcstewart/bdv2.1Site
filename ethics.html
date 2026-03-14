@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ButterflyDreaming — Ethics</title>
-<link rel="stylesheet" href="style.css">
+<title>ButterflyDreaming — Ethics Framework</title>
+<link rel="stylesheet" href="../../Downloads/bd_v25%203/style.css">
 <style>
   .site-banner {
     background: rgba(200,169,110,0.08);
@@ -21,24 +21,140 @@
     color: var(--gold-dim);
     border-bottom: none;
   }
-  .construction-block {
-    text-align: center;
-    padding: 3rem 2rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background: rgba(200,169,110,0.04);
-    margin: 2rem 0;
+
+  /* Ethics page styles */
+  .eth-section {
+    margin: 2.8rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
   }
-  .construction-glyph {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    opacity: 0.6;
+  .eth-section h2 {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    border: none;
+    margin: 0;
+    padding: 0;
   }
-  .construction-block p {
+  .eth-num {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--gold-dim);
+    flex-shrink: 0;
+    padding-top: 0.15rem;
+  }
+  .eth-subsection {
+    margin: 1.8rem 0 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .eth-body {
+    color: var(--text);
+    font-size: 0.97rem;
+    line-height: 1.82;
+    margin: 0.55rem 0;
+    text-align: justify;
+  }
+  .eth-callout {
+    border-left: 2px solid var(--gold-dim);
+    padding: 0.65rem 1.4rem;
+    margin: 1.4rem 0;
     color: var(--text-dim);
     font-style: italic;
-    font-size: 1.05rem;
-    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+  .eth-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.6rem 0;
+  }
+  .eth-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.55rem;
+    color: var(--text);
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+  .eth-list li::before {
+    content: '◦';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+  }
+  .eth-list li strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .eth-stream {
+    background: rgba(200,169,110,0.04);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1rem 1.3rem;
+    margin: 1rem 0;
+  }
+  .eth-stream-label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .eth-draft-note {
+    background: rgba(168,155,200,0.07);
+    border: 1px solid rgba(168,155,200,0.18);
+    border-radius: 3px;
+    padding: 0.9rem 1.3rem;
+    margin: 0 0 2rem;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .toc {
+    background: rgba(200,169,110,0.04);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1.1rem 1.5rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .toc-title {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.7rem;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 1.4rem;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+  .toc ol li a {
+    color: var(--gold-dim);
+    border-bottom: none;
+    text-decoration: none;
+  }
+  .toc ol li a:hover {
+    color: var(--gold);
   }
 </style>
 </head>
@@ -51,13 +167,13 @@
 <nav>
   <div class="nav-inner">
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aspirations.html">Aspirations</a></li>
-      <li><a href="philosophy.html">Philosophy</a></li>
-      <li><a href="journey.html">User Journey</a></li>
-      <li><a href="participate.html">Participate</a></li>
-      <li><a href="ui.html">In Detail</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="../../Downloads/bd_v25%203/index.html">Home</a></li>
+      <li><a href="../../Downloads/bd_v25%203/aspirations.html">Aspirations</a></li>
+      <li><a href="../../Downloads/bd_v25%203/philosophy.html">Philosophy</a></li>
+      <li><a href="../../Downloads/bd_v25%203/journey.html">User Journey</a></li>
+      <li><a href="../../Downloads/bd_v25%203/participate.html">Participate</a></li>
+      <li><a href="../../Downloads/bd_v25%203/ui.html">In Detail</a></li>
+      <li><a href="../../Downloads/bd_v25%203/timeline.html">Timeline</a></li>
       <li><a href="ethics.html" class="active">Ethics</a></li>
     </ul>
   </div>
@@ -65,19 +181,309 @@
 
 <div class="hero">
   <div class="hero-glyph">✦</div>
-  <h1>Ethics</h1>
+  <h1>Ethics Framework</h1>
   <p class="subtitle">Privacy, safety, and the responsibilities of anonymous encounter</p>
 </div>
 
 <div class="page">
 
-  <div class="construction-block">
-    <div class="construction-glyph">◈</div>
-    <h2 style="font-family: var(--font-head); font-weight: 400; color: var(--gold); font-size: 1.4rem;">This page is under construction</h2>
-    <p>
-      We are working through the ethical framework for ButterflyDreaming — the questions of privacy, safety, anonymity, and duty of care that must be clearly addressed before the platform proceeds further. This page will document our thinking openly and invite comment.
-    </p>
+  <div class="eth-draft-note">
+    This is a working document, not a final statement. It is published openly as part of the project's commitment to transparency and as an invitation to comment and critique. We do not claim to have resolved every tension — some of the questions raised here are genuinely difficult, and we think honesty about that difficulty is more valuable than false reassurance.
   </div>
+
+  <p class="eth-body">
+    ButterflyDreaming is a non-commercial, volunteer-led project. It is not a business, not a data operation, and not an engagement platform. Its purpose is to create conditions for genuine, anonymous, ephemeral encounter between two people around a shared body of symbolic and reflective text. Every design decision — including the safety and ethics architecture described here — is made in service of that purpose.
+  </p>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#consent">The Nature of the Encounter: Consent and Impermanence</a></li>
+      <li><a href="#ai">AI Involvement: Transparency and Limits</a></li>
+      <li><a href="#equality">Equality and Respect Between Partners</a></li>
+      <li><a href="#commons">Saved Content and the Text-Graph</a></li>
+      <li><a href="#research">Research and Evaluation</a></li>
+      <li><a href="#neutrality">Philosophical Neutrality and the Integrity of the Corpus</a></li>
+      <li><a href="#safety">Safety Architecture and Content Moderation</a></li>
+      <li><a href="#vulnerability">Vulnerability, Safety, and Who This Platform Is For</a></li>
+      <li><a href="#accountability">Operator Accountability</a></li>
+      <li><a href="#longevity">Longevity and the Future of the Graph</a></li>
+    </ol>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 1 -->
+  <div class="eth-section" id="consent">
+    <span class="eth-num">01</span>
+    <h2>The Nature of the Encounter: Consent and Impermanence</h2>
+  </div>
+
+  <p class="eth-body">On entering ButterflyDreaming, users will be given a clear statement of what the platform is, what is about to happen, and what the encounter involves. This includes:</p>
+
+  <ul class="eth-list">
+    <li><strong>The dyadic structure</strong> — you will be paired with one other anonymous person</li>
+    <li><strong>Your own anonymity</strong> — you will remain anonymous throughout the encounter; no identifying information about you is collected or stored</li>
+    <li><strong>The ephemeral nature of the pairing</strong> — the encounter is temporary and will end; this is not a flaw but a defining feature of the experience</li>
+    <li><strong>The permanence of saved content</strong> — any text you jointly agree to save enters the public domain under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0 open licence</a>, and cannot be recalled; the full implications of this are explained in <a href="#commons">Section 4</a></li>
+    <li><strong>Copyright responsibility</strong> — users may draw on, quote from, or interpret external works and priming material within their contributions, but must not add material that is in copyright without appropriate rights clearance; the AGPL-3.0 licence applies to content generated on the platform and users are responsible for ensuring what they contribute is free to contribute; all new content will be checked for copyright issues as soon as practicable; in the event of a valid complaint the material will be removed and any child nodes derived from it will be reviewed; every node will carry a reference URL which can be quoted for attribution or complaint purposes</li>
+    <li><strong>The presence of AI</strong> — an AI modulator is guiding your experience and moderating content throughout</li>
+    <li><strong>The research context</strong> — anonymous, aggregate data from encounters may contribute to published research on the platform design; no individual encounter can be attributed to any individual</li>
+  </ul>
+
+  <p class="eth-body">A briefer reminder of the ephemeral nature of the pairing will be given at the moment of pairing itself. The Japanese concept of <em>ichigo ichie</em> (一期一会) — "one time, one meeting", the Zen and tea ceremony principle that each encounter is utterly unique and will never recur — informs the tone of this moment. The depairing notification, when the encounter ends, is apologetic in register: something real occurred, and its ending deserves to be marked rather than simply terminated.</p>
+
+  <p class="eth-body">Note: the priming content corpus will be editorially cleared for rights before inclusion, and users may engage with it freely. The copyright responsibility described above applies to external material that users themselves introduce.</p>
+
+  <div class="eth-callout">
+    The impermanence of the encounter is not a limitation to be managed but a philosophical commitment. It is what gives each meeting its quality of gift — unrepeatable, unarchived, freely given.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 2 -->
+  <div class="eth-section" id="ai">
+    <span class="eth-num">02</span>
+    <h2>AI Involvement: Transparency and Limits</h2>
+  </div>
+
+  <p class="eth-body">ButterflyDreaming will use AI at several levels. We are committed to being honest about this rather than obscuring it. AI will be used in the following ways:</p>
+
+  <ul class="eth-list">
+    <li><strong>As a modulator of the encounter space</strong> — shaping the flow and register of the dyadic conversation</li>
+    <li><strong>As a content screening tool</strong> — detecting toxicity, distress signals, and identity-compromising language in real time</li>
+    <li><strong>As a companion for singleton users</strong> — users who arrive at the platform without a pairing partner will have the option to interact with an AI rather than wait; this will be disclosed clearly at that moment</li>
+  </ul>
+
+  <p class="eth-body">Users will be told: <em>"AI is guiding your experience and moderating content."</em> This is the honest and sufficient statement at this stage. We note, as a known horizon in the field, that the boundary between AI and human presence in such systems is philosophically and practically complex. ButterflyDreaming commits to transparency about the nature of interactions as the platform evolves. Any future change to how AI is used in the encounter space will be disclosed to users.</p>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 3 -->
+  <div class="eth-section" id="equality">
+    <span class="eth-num">03</span>
+    <h2>Equality and Respect Between Partners</h2>
+  </div>
+
+  <p class="eth-body">The anonymity of the encounter will be mutual and complete. Neither partner will know who the other is — their name, age, location, background, or social position. This is precisely what enables genuine equality of encounter: the usual asymmetries of status, identity, and social performance are suspended.</p>
+
+  <p class="eth-body">Users will be asked, as a condition of participation, to treat their partner with respect as an equal. This will be stated plainly on the portal. The anonymity that removes the usual social stakes of conduct is paired with an explicit social contract: you do not know who you are talking to, and they do not know who you are. The encounter asks for good faith from both.</p>
+
+  <p class="eth-body">Technical measures will be in place to detect attempts to bypass client-side screening. Server-side checks remain in place regardless of what happens on the client.</p>
+
+  <div class="eth-callout">
+    Anonymity removes the ledger of social consequence. The ethical obligation it creates in return is to treat the unknown other as fully human.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 4 -->
+  <div class="eth-section" id="commons">
+    <span class="eth-num">04</span>
+    <h2>Saved Content and the Text-Graph</h2>
+  </div>
+
+  <p class="eth-body">Text saved from a dyadic encounter will become part of the Text-Graph — the growing public body of collaboratively created nodes that forms the platform's collective output. Users are introduced to the public domain and AGPL-3.0 licence at the portal stage (<a href="#consent">Section 1</a>); the full implications are set out here.</p>
+
+  <p class="eth-body">Once saved, a node belongs to the commons. It is released under the AGPL-3.0 open licence and cannot be recalled by the individuals who created it. Users will be warned clearly of this at the point of saving, and given a final reflective pause — a brief moment to read what they have created before it becomes permanent. This cooling-off prompt is consistent with the reflective tempo of the platform as a whole.</p>
+
+  <p class="eth-body">The only post-save mechanism for removing content is server-side action applied soon after saving — a narrow window in which the moderation team can act on flagged or complained-about material before it propagates. Users are told this honestly: there is no standard right of removal once content has been saved, other than through a valid copyright or safety complaint. Every node will carry a reference URL to facilitate such complaints.</p>
+
+  <p class="eth-body">The Text-Graph will be backed up continuously using Memgraph's native backup structure, allowing the graph to be reconstructed to within minutes of any point. The graph will also be made available in the public domain in an open, documented format at regular intervals. The community's gift will endure even if the platform does not.</p>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 5 -->
+  <div class="eth-section" id="research">
+    <span class="eth-num">05</span>
+    <h2>Research and Evaluation</h2>
+  </div>
+
+  <p class="eth-body">ButterflyDreaming is a research project as well as a platform. Anonymous, aggregate data from encounters may be used in published research describing the platform's design, operation, and effects. Users will be informed of this on the portal.</p>
+
+  <p class="eth-body">The core assurance is that no individual encounter can be attributed to any individual. The platform will collect no personal data. Anonymity is not a feature added on top of a data system — it is the architecture. There will be no record that could link a node or a conversation fragment to a named person, because such a record will never be created.</p>
+
+  <p class="eth-body">This resolves the conventional tensions of research ethics around consent and privacy in a distinctive way: where there is no personal data, conventional data protection obligations have nothing to act upon, and the usual risks of data breach or re-identification do not arise.</p>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 6 -->
+  <div class="eth-section" id="neutrality">
+    <span class="eth-num">06</span>
+    <h2>Philosophical Neutrality and the Integrity of the Corpus</h2>
+  </div>
+
+  <p class="eth-body">ButterflyDreaming is grounded in a set of philosophical traditions — Daoist thought, Jungian amplification, complexity theory, contemporary biology — that inform its design. This is not a neutral framing. We acknowledge that openly.</p>
+
+  <p class="eth-body">The priming content corpus — the body of poetry, myth, folktale, and philosophy that will seed the platform and frame the encounters — will be editorially curated and cleared for rights before inclusion. Our intention is to draw from a broad range of cultural and geographic traditions, and to avoid allowing any single tradition to dominate the symbolic commons. A corpus that is culturally narrow will produce encounters that are culturally narrow.</p>
+
+  <p class="eth-body">Users may add their own text, including quotation from or interpretation of external works and priming material. They are encouraged to bring commentary, reflection, and creative response. Copyright responsibility for externally sourced material rests with the user, as described in <a href="#consent">Section 1</a>.</p>
+
+  <p class="eth-body">The values that define what belongs in the corpus and what does not are stated as: solidarity, equity, and freedom — a recognition that genuine encounter requires both care for the other and respect for their freedom. Content that is harmful to the common global wellbeing, or that is incompatible with these values, will not be admitted to the corpus.</p>
+
+  <p class="eth-subsection">The tolerance question</p>
+
+  <p class="eth-body">We are aware of the classic tension: a commitment to openness must still have limits, or it becomes a vehicle for those who wish to close it. ButterflyDreaming will reserve the power to tag content that is ideologically swamping, culturally imbalanced, or produced by coordinated campaigns. Tagging is not deletion — tagged content remains in the graph, but users will be able to filter by tag. This preserves the record without amplifying distortion.</p>
+
+  <p class="eth-body">The tagging taxonomy will be kept minimal to avoid becoming an editorial classification system with its own biases. Tags in use will include: <em>flagged for volume</em>, <em>flagged for thematic imbalance</em>, <em>community reviewed</em>.</p>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 7 -->
+  <div class="eth-section" id="safety">
+    <span class="eth-num">07</span>
+    <h2>Safety Architecture and Content Moderation</h2>
+  </div>
+
+  <p class="eth-body">User-generated content — both live chat and saved nodes — will pass through three parallel real-time detection streams. These will operate independently and trigger different responses.</p>
+
+  <div class="eth-stream">
+    <div class="eth-stream-label">Stream 1 — Toxicity and harmful content</div>
+    <p class="eth-body" style="margin-top:0;">Detects material that may harm the partner: abuse, manipulation, threatening language, identity-based attacks, sexually explicit content. Will use a layered pipeline:</p>
+    <ul class="eth-list">
+      <li><strong>Client-side screening first</strong> — fast, no data leaves the user's device, using the TensorFlow.js toxicity model (labels: identity_attack, insult, obscene, severe_toxicity, sexual_explicit, threat, toxicity)</li>
+      <li><strong>Server-side LLM second</strong> — deeper analysis, catches more subtle content</li>
+      <li><strong>Offline deep scrutiny third</strong> — asynchronous, retrospective check on saved nodes</li>
+    </ul>
+    <p class="eth-body" style="margin-bottom:0;">Flagged text will be underlined and returned to the originating user for correction before transmission. If transmitted anyway, the offending passage will be replaced with asterisks in the received or stored version.</p>
+  </div>
+
+  <div class="eth-stream">
+    <div class="eth-stream-label">Stream 2 — Distress and negative self-affect</div>
+    <p class="eth-body" style="margin-top:0;">Will detect signals that may indicate the originating user is in distress — expressions of hopelessness, self-harm ideation, acute crisis. This is a separate detector because distress signals are not caught by toxicity filters and require a completely different response.</p>
+    <p class="eth-body" style="margin-bottom:0;">Rather than blocking or asterisking, the AI modulator will surface gently — pausing the encounter, addressing the user directly, and offering the portal safety resources. The encounter will be held rather than terminated, preserving the user's agency. The modulator's intervention at this level is designed to feel continuous with its general presence in the encounter space, not like external enforcement.</p>
+  </div>
+
+  <div class="eth-stream">
+    <div class="eth-stream-label">Stream 3 — Anonymity protection</div>
+    <p class="eth-body" style="margin-top:0;">Will detect content that could identify a user to their current platform partner. Checking will be both AI-assisted and manual. Hard identifiers — phone numbers, email addresses, URLs — will be pattern-matched client-side with high confidence. Soft identifiers — specific clock times or named locations — are context-dependent and harder to detect automatically.</p>
+    <p class="eth-body" style="margin-bottom:0;">A specific design rule will apply: explicit clock times will not be permitted in user-generated content. Vague temporal references are acceptable; specific times are not. This rule addresses one of the most common soft identifier classes, though we acknowledge that circumlocutions exist and no automated rule is fully comprehensive. Both AI-assisted and manual review will form part of the anonymity protection process.</p>
+  </div>
+
+  <p class="eth-subsection">The modulator's role</p>
+
+  <div class="eth-callout">
+    The AI modulator is not a censor. Its interventions should feel continuous with its general role of shaping the encounter space — not like an external enforcement mechanism that drops in when rules are broken. The modulator is a presence throughout, not a watchdog that appears at moments of violation.
+  </div>
+
+  <p class="eth-body">Modulator responses will run on a spectrum of severity:</p>
+  <ul class="eth-list">
+    <li><strong>Gentle reflection</strong> — for ambiguous signals, noting what it has observed and inviting the user to respond</li>
+    <li><strong>Pause and query</strong> — for clearer distress signals, holding the encounter and addressing the user directly</li>
+    <li><strong>Surface safety links</strong> — for serious distress, offering portal safety resources without ending the encounter</li>
+    <li><strong>Block and asterisk</strong> — for confirmed toxicity and hard anonymity compromise</li>
+    <li><strong>Session end</strong> — reserved for severe or repeated violation, handled gracefully</li>
+  </ul>
+
+  <p class="eth-subsection">Content design as a safety mechanism</p>
+
+  <p class="eth-body">The choice of symbolic, reflective, literary content as the priming corpus is not only a philosophical decision — it is a safety design decision. The register of poetry, myth, and folktale naturally suppresses the linguistic patterns that carry the greatest risks: specific identifying information, transactional language, explicit content, and the vocabulary of manipulation. The content design and the safety architecture reinforce each other.</p>
+
+  <p class="eth-subsection">Known limitations</p>
+
+  <ul class="eth-list">
+    <li>The TensorFlow.js toxicity model, used for client-side first-pass screening, has lower accuracy than server-side alternatives and has not been updated recently. It is one layer in a multi-layer system, not a sole defence.</li>
+    <li>Research shows that content moderation systems perform poorly on coded or indirect language — content that expresses harmful intent in terms that do not trigger standard classifiers. This is an acknowledged limitation of the field, not specific to ButterflyDreaming.</li>
+    <li>The prohibition on explicit clock times does not eliminate all possible soft identifiers; circumlocutions may convey approximate times without stating them. Manual review is part of the response to this limitation.</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 8 -->
+  <div class="eth-section" id="vulnerability">
+    <span class="eth-num">08</span>
+    <h2>Vulnerability, Safety, and Who This Platform Is For</h2>
+  </div>
+
+  <p class="eth-body">ButterflyDreaming takes a considered position on vulnerability that differs from the approach of most platforms: rather than treating the platform as unsuitable for particular groups, we argue that ButterflyDreaming is a lower-risk environment than most digital spaces, and that the appropriate response to vulnerability is transparency, monitoring, and accessible support — not exclusion.</p>
+
+  <p class="eth-subsection">The risk comparison</p>
+
+  <ul class="eth-list">
+    <li><strong>No persistent identity</strong> — users cannot be followed, identified, or harassed across sessions</li>
+    <li><strong>No follower counts, likes, or algorithmic engagement maximisation</strong></li>
+    <li><strong>No advertising</strong>, and no commercial interest in maximising time on platform</li>
+    <li><strong>Curated, rights-cleared symbolic content</strong> as the shared field</li>
+    <li><strong>AI monitoring</strong> throughout the encounter</li>
+    <li><strong>Text-only</strong> — no image or video exchange</li>
+  </ul>
+
+  <p class="eth-body">The comparison with online gaming is instructive. Children and young people routinely encounter strangers, competitive aggression, and potentially harmful interactions in gaming environments that attract far less regulatory concern than this platform. ButterflyDreaming's design reduces these risks substantially.</p>
+
+  <p class="eth-subsection">The symbolic content argument</p>
+
+  <p class="eth-body">The priming corpus draws on poetry, myth, folktale, and philosophy — the same body of material that has been used in therapeutic, educational, and developmental contexts for centuries. The literature on this is substantial: Bruno Bettelheim's work on fairy tales, and a long tradition of bibliotherapy and symbolic work in therapeutic practice, make the case that archetypal symbolic material is not harmful to young or vulnerable people — quite the contrary. The platform's content is not a risk factor.</p>
+
+  <p class="eth-subsection">Self-selection</p>
+
+  <p class="eth-body">The platform will require reading competence, tolerance for ambiguity, willingness to engage with symbolic material without visual stimulation, and comfort with the unusual structure of an anonymous dyadic encounter. It will not naturally attract young children, and the entry process will give every user the opportunity to understand what they are entering before they proceed.</p>
+
+  <p class="eth-subsection">Portal safety features</p>
+
+  <ul class="eth-list">
+    <li>An <strong>anonymous feedback field</strong> — text submitted without any identity, visible to the moderation team only</li>
+    <li><strong>Emergency support links:</strong> <a href="https://www.befrienders.org">Befrienders Worldwide</a> (befrienders.org — 400+ centres in 38 countries) for international reach; <strong>Samaritans UK</strong> (116 123) for UK users; a note directing users to their local crisis line at befrienders.org</li>
+    <li>A dedicated <strong>safety email address</strong> (safety@butterflydreaming.info) monitored by the founding team, with an honest statement that this is not a crisis service and response times are not guaranteed</li>
+  </ul>
+
+  <p class="eth-subsection">Facilitated group use</p>
+
+  <p class="eth-body">Parents, teachers, support workers, and community groups are explicitly invited to use ButterflyDreaming as a facilitated local group tool. In this context the platform operates differently — not as an anonymous stranger-encounter system but as a structured reflective exercise among people who know each other, with a facilitator present. This is a genuinely different use case that extends the platform's reach while reducing its risks further.</p>
+
+  <p class="eth-subsection">Age and legal position</p>
+
+  <p class="eth-body">Research conducted in March 2026 confirms that ButterflyDreaming falls outside mandatory age verification requirements on three grounds: its content design (no pornography, no self-harm content, no content triggering the specific duties of the UK Online Safety Act 2023); its scale (several hundred simultaneously online users is far below all regulatory thresholds); and its non-commercial status. The legal landscape in this area is evolving rapidly and will be monitored.</p>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 9 -->
+  <div class="eth-section" id="accountability">
+    <span class="eth-num">09</span>
+    <h2>Operator Accountability</h2>
+  </div>
+
+  <p class="eth-body">ButterflyDreaming is built and operated in good faith by a small volunteer team with no commercial interest in its outcomes. We cannot guarantee the safety of every user in every encounter — no platform honestly can. What we can state is:</p>
+
+  <ul class="eth-list">
+    <li>Safety has been central to every design decision from the outset</li>
+    <li>We will respond seriously to every concern raised through the feedback and safety channels</li>
+    <li>We will learn from what we cannot yet foresee — the pilot phase is explicitly a learning exercise</li>
+    <li>We will not make claims about the platform's safety that go beyond what the design can deliver</li>
+  </ul>
+
+  <div class="eth-callout">
+    We cannot guarantee safety. What we can guarantee is that safety has been central to every design decision, that we will respond seriously to every concern raised, and that we will learn from what we cannot yet foresee.
+  </div>
+
+  <p class="eth-body">The platform is envisaged as operating under fiscal hosting by <a href="https://www.socialchangenest.org">Social Change Nest CIC</a> (UK), a registered community interest company, pending formal application. This will provide a degree of formal accountability and separation. Questions about liability for member projects are addressed by Social Change Nest's own governance arrangements.</p>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 10 -->
+  <div class="eth-section" id="longevity">
+    <span class="eth-num">10</span>
+    <h2>Longevity and the Future of the Graph</h2>
+  </div>
+
+  <p class="eth-body">The Text-Graph is the community's collective gift — a growing body of collaborative text that does not belong to any individual or to the project team. Its longevity matters independently of the platform's own future.</p>
+
+  <ul class="eth-list">
+    <li><strong>Continuous backup</strong> — the graph will be backed up using Memgraph's native backup structure on a rolling basis, allowing reconstruction to within minutes of any point in time</li>
+    <li><strong>Periodic public export</strong> — the graph will be exported in an open, documented format and made publicly available at regular intervals; this will ensure the corpus is accessible and preservable regardless of the platform's operational status</li>
+  </ul>
+
+  <p class="eth-body">If ButterflyDreaming were to cease operating, the Text-Graph would remain available in its exported form as a public domain resource. The gift will not be conditional on the platform's survival.</p>
+
+  <div class="divider"></div>
+
+  <!-- INVITATION TO COMMENT -->
+  <h2 style="font-family: var(--font-head); font-weight: 400; color: var(--gold); font-size: 1.4rem; margin: 2rem 0 0.8rem;">Invitation to Comment</h2>
+
+  <p class="eth-body">This framework is a working document, not a final statement. We welcome comment, challenge, and critique from anyone who reads it.</p>
+
+  <p class="eth-body">The comment system below allows both guest comments without registration and comments with a Hyvor account. If you would like to be notified when someone replies to your comment, you will need to register — this is an extremely minimal process. Guest comments are equally welcome and will be read.</p>
+
+  <p class="eth-body">The ethics of what we are building is not something we can resolve alone, and we do not claim to have done so.</p>
 
 </div>
 
@@ -88,7 +494,7 @@
 <!-- Hyvor Talk Comments -->
 <div style="max-width:860px; margin:3rem auto; padding:0 2rem;">
 <p style="font-size:0.86rem; color:var(--text-dim); letter-spacing:0.04em; text-align:center; margin:0 auto 0.8rem; max-width:860px; padding:0 2rem; font-style:italic;">
-  Guest commenting welcome — no account needed. Log in with a Hyvor account to receive reply notifications and maintain a consistent identity.
+  Guest commenting welcome — no account needed. Register with Hyvor to receive reply notifications.
 </p>
   <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
   <hyvor-talk-comments website-id="15124" page-id="bd-ethics"></hyvor-talk-comments>
