@@ -27,6 +27,24 @@
     display: flex;
     flex-direction: column;
   }
+  .zhuangzi-quote {
+    float: right;
+    width: 10rem;
+    margin: 0 0 1.5rem 1.5rem;
+    color: var(--gold-dim);
+    font-style: italic;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .zhuangzi-quote p {
+    margin: 0 0 0.35rem;
+    padding: 0;
+  }
+  .zhuangzi-quote .indent-0 { margin-left: 0; }
+  .zhuangzi-quote .indent-1 { margin-left: 0.5rem; }
+  .zhuangzi-quote .indent-2 { margin-left: 1rem; }
+  .zhuangzi-quote .indent-3 { margin-left: 1.5rem; }
+  .zhuangzi-quote .indent-4 { margin-left: 2rem; }
 </style>
 </head>
 <body>
@@ -55,18 +73,33 @@
 <div class="hero">
   <div class="hero-glyph">𓂀</div>
 
-  <h1 style="font-size: 0.95em;">ButterflyDreaming : PROJECT DESIGN</h1>
-  <p class="subtitle">A platform for dyadic symbolic encounter</p>
-  <p class="lede">Two strangers. A shared field of symbols. An AI that modulates the space between them. Something new emerges that neither could have produced alone.</p>
+  <h1 style="font-size: 3em;">ButterflyDreaming : PROJECT DESIGN</h1>
+  <p class="subtitle">We are documenting the design for a new free social media that is based on anonymous pairs of users editing existing fragments of media — we call the concept 'ButterflyDreaming': a reference to the contemplative style of the ancient Chinese sage Zhuangzi</p>
 </div>
 
 <div class="page">
 
   <div class="divider"></div>
 
-  <p>
-    <em>Once upon a time, Zhuangzi dreamt he was a butterfly — fluttering freely, unaware of being Zhuangzi. Then he woke. And could not say: was he a man who had dreamt of being a butterfly, or a butterfly now dreaming of being a man?</em>
-  </p>
+  <div class="zhuangzi-quote">
+    <p class="indent-2">Once upon</p>
+    <p class="indent-0">a time, Zhuangzi</p>
+    <p class="indent-3">dreamt he was</p>
+    <p class="indent-1">a butterfly —</p>
+    <p class="indent-4">fluttering freely,</p>
+    <p class="indent-0">unaware of being</p>
+    <p class="indent-2">Zhuangzi.</p>
+    <p class="indent-3">&nbsp;</p>
+    <p class="indent-1">Then he woke.</p>
+    <p class="indent-4">And could not say:</p>
+    <p class="indent-0">was he a man</p>
+    <p class="indent-2">who had dreamt</p>
+    <p class="indent-1">of being a</p>
+    <p class="indent-4">butterfly, or a</p>
+    <p class="indent-2">butterfly now dreaming</p>
+    <p class="indent-0">of being a</p>
+    <p class="indent-3">man?</p>
+  </div>
 
   <!-- Change 13: metaphor warning aside -->
   <p style="font-style: italic; color: var(--text-dim); font-size: 0.95rem; border-left: 2px solid var(--gold-dim); padding-left: 1.25rem; margin: 2rem 0;">
