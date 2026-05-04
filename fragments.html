@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fragments — ButterflyDreaming : PROJECT DESIGN</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .site-banner {
+    background: rgba(200,169,110,0.08);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.45rem 1rem;
+    font-size: 0.99rem;
+    letter-spacing: 0.07em;
+    color: var(--text-dim);
+    position: relative;
+    z-index: 101;
+  }
+  .site-banner a { color: var(--gold-dim); border-bottom: none; }
+  .fragment-panel {
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg2);
+  }
+  .fragment-panel-header {
+    padding: 1.25rem 1.5rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .fragment-panel-header h3 {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--gold);
+    font-style: italic;
+  }
+  .fragment-panel-header p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+  .fragment-panel iframe {
+    display: block;
+    width: 100%;
+    height: 520px;
+    border: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="site-banner">
+  This site documents an ongoing design project. The platform is in development. &nbsp;|&nbsp; <a href="https://butterflydreaming.ai">butterflydreaming.ai</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aspirations.html">Aspirations</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="journey.html">User Journey</a></li>
+      <li><a href="participate.html">Participate</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+      <li><a href="fragments.html" class="active">Fragments</a></li>
+      <li><a href="ui.html">In Detail</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-glyph">⟡</div>
+
+  <h1 style="font-size: 3em;">ButterflyDreaming : PROJECT DESIGN</h1>
+  <p class="subtitle">BITS AND PIECES OF THE FUTURE SYSTEM</p>
+</div>
+
+<div class="page">
+
+  <p>
+    On this page you can experiment with the idea of text controlling media. You can change text, use a more complicated interface to change the text, copy and paste text to store it. Or copy a link that will send a text description together with an interpreting web site as a single link. Just play around and hopefully things will become clear. In the finished platform they would probably live in a little panel and consume text back and forwards from the editing of a node in the graph. Or they can live outside the system as independent players reading text from ButterflyDreaming and writing back to other destinations. There are many possibilities. (Developers can access the code freely at GitHub and create their own modules and extension directives.)
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="fragment-panel">
+    <div class="fragment-panel-header">
+      <h3>A 2D Kolam Inspired Pattern Generator</h3>
+      <p>Using an L-system</p>
+    </div>
+    <iframe src="https://wrcstewart.github.io/butterflydreaming_visual_1/" title="A 2D Kolam Inspired Pattern Generator" loading="lazy"></iframe>
+  </div>
+
+  <div class="fragment-panel">
+    <div class="fragment-panel-header">
+      <h3>An Ultra Simple Music Generator</h3>
+      <p>Using an extended .abc script</p>
+    </div>
+    <iframe src="https://wrcstewart.github.io/butterflydreaming_music_1/" title="An Ultra Simple Music Generator" loading="lazy"></iframe>
+  </div>
+
+  <div class="fragment-panel">
+    <div class="fragment-panel-header">
+      <h3>A 3D Tree L-System</h3>
+      <p>Very basic</p>
+    </div>
+    <iframe src="https://wrcstewart.github.io/butterflydreaming_3d_1/" title="A 3D Tree L-System" loading="lazy"></iframe>
+  </div>
+
+</div>
+
+<!-- Community forum link -->
+<div style="max-width:860px; margin:3rem auto; padding:0 2rem; text-align:center;">
+  <p style="font-size:1.7rem; color:var(--text-dim); font-style:italic; line-height:1.75; font-family:var(--font-head);">
+    Want to discuss what you've read on this page, ask a question, or share a thought? <a href="https://forum.butterflydreaming.info">Join us at the ButterflyDreaming FORUM</a>
+  </p>
+</div>
+
+<footer>
+  ButterflyDreaming &mdash; a reflective ecosystem &mdash; design documentation v0.2
+</footer>
+
+</body>
+</html>
