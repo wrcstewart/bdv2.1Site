@@ -8,20 +8,44 @@
 <style>
   /* Change 1: slim banner above nav */
   .site-banner {
-    background: rgba(200,169,110,0.08);
+    background: rgba(200,169,110,0.18);
     border-bottom: 1px solid var(--border);
     text-align: center;
     padding: 0.65rem 1rem;
+    margin-bottom: 1.5rem;
     font-size: 0.99rem;
     letter-spacing: 0.07em;
-    color: var(--text-dim);
+    color: var(--text);
     position: relative;
     z-index: 101;
   }
   .site-banner a {
-    color: var(--gold-dim);
+    color: var(--gold);
     border-bottom: none;
   }
+  /* Zhuangzi quote panel, copied from philosophy.html */
+  .zhuangzi-panel {
+    display: block;
+    width: 30rem;
+    max-width: 100%;
+    margin: 3.5rem auto 0;
+    background: #1a1200;
+    color: #e8c84a;
+    font-style: italic;
+    text-align: left;
+    line-height: 1.4;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+  }
+  .zhuangzi-panel p {
+    margin: 0 0 0.35rem;
+    padding: 0;
+  }
+  .zhuangzi-panel .indent-0 { margin-left: 0; }
+  .zhuangzi-panel .indent-1 { margin-left: 1.5rem; }
+  .zhuangzi-panel .indent-2 { margin-left: 3rem; }
+  .zhuangzi-panel .indent-3 { margin-left: 4.5rem; }
+  .zhuangzi-panel .indent-4 { margin-left: 6rem; }
   /* Change 3: equal-height cards */
   .card-grid .card {
     display: flex;
@@ -33,7 +57,7 @@
 
 <!-- Change 1: documentation banner -->
 <div class="site-banner">
-  This site documents an ongoing design project. The platform is in development. &nbsp;|&nbsp; <a href="https://butterflydreaming.ai">butterflydreaming.ai</a>
+  This site documents an ongoing design project. The platform is in development at <a href="https://butterflydreaming.org">butterflydreaming.org</a>
 </div>
 
 <nav>
@@ -56,8 +80,29 @@
 <div class="hero">
   <div class="hero-glyph">𓂀</div>
 
-  <h1 style="font-size: 3em;">ButterflyDreaming : PROJECT DESIGN</h1>
-  <p class="subtitle">A new free social media that is based on anonymous pairs of users editing existing fragments of media — we call the concept 'ButterflyDreaming'</p>
+  <h1 style="font-size: 3em;">ButterflyDreaming</h1>
+  <p class="subtitle">A new free social media that is based on anonymous users sharing creation and hence identity</p>
+
+  <div class="zhuangzi-panel">
+    <p class="indent-3">Once</p>
+    <p class="indent-1">upon a time,</p>
+    <p class="indent-4">Zhuangzi</p>
+    <p class="indent-0">dreamt he was</p>
+    <p class="indent-2">a butterfly —</p>
+    <p class="indent-4">fluttering freely,</p>
+    <p class="indent-1">unaware of being</p>
+    <p class="indent-3">Zhuangzi.</p>
+    <p class="indent-0">&nbsp;</p>
+    <p class="indent-2">Then he woke.</p>
+    <p class="indent-0">And could not say:</p>
+    <p class="indent-4">was he a man</p>
+    <p class="indent-1">who had dreamt</p>
+    <p class="indent-3">of being a butterfly,</p>
+    <p class="indent-0">or a butterfly</p>
+    <p class="indent-4">now dreaming</p>
+    <p class="indent-2">of being a man?</p>
+    <p class="indent-1">— <em>Zhuangzi</em>, Ch. 2 (c. 4th c. BCE)</p>
+  </div>
 </div>
 
 <div class="page">
@@ -72,7 +117,7 @@
   </p>
 
   <p>
-    In practice it is a new kind of social media — somewhere between a relaxed chat, a piece of literature you wander through, and a gentle game. The philosophical architecture is there for those who want it. For everyone else, it is simply an unusually interesting way to spend time with a stranger.
+    In practice it is a new kind of social media — somewhere between a relaxed chat, a piece of literature you wander through, and a gentle game. The philosophical architecture is there for those who want it. For others, it may be an interesting way to spend time with a stranger.
   </p>
 
   <p>
